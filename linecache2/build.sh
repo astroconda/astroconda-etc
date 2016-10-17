@@ -1,6 +1,7 @@
 #!/bin/bash
 
-$PYTHON setup.py install 
+rm -rf linecache2/tests
+$PYTHON setup.py install
 
 # Add more build steps here, if they are necessary.
 
