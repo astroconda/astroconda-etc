@@ -1,0 +1,33 @@
+{% set name = '' %}
+{% set version = '' %}
+{% set number = '0' %}
+
+about:
+    home:
+    license:
+    summary:
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+    number: {{ number }}
+
+source:
+    fn: {{ name }}-{{ version }}.tar.gz
+    url: http://example.com/example/{{ name }}-{{ version }}.tar.gz
+    #git_tag: {{ version }}
+    #git_url:
+
+requirements:
+    build:
+    - setuptools
+    - python x.x
+    run:
+
+#test:
+#   imports:
+#    -
+#   commands:
+#    -
