@@ -1,0 +1,62 @@
+package:
+  name: sphinx_rtd_theme
+  version: "0.1.10a0"
+
+source:
+  fn: sphinx_rtd_theme-0.1.10a0.tar.gz
+  url: https://pypi.python.org/packages/da/6b/1b75f13d8aa3333f19c6cdf1f0bc9f52ea739cae464fbee050307c121857/sphinx_rtd_theme-0.1.10a0.tar.gz
+  md5: 83bd95cae55aa8b773a8cc3a41094282
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - sphinx_rtd_theme = sphinx_rtd_theme:main
+    #
+    # Would create an entry point called sphinx_rtd_theme that calls sphinx_rtd_theme.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - sphinx_rtd_theme
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/snide/sphinx_rtd_theme/
+  license: BSD License
+  summary: 'ReadTheDocs.org theme for Sphinx, 2013 version.'
+  license_family: BSD
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
