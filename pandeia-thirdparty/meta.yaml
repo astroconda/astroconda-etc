@@ -6,7 +6,7 @@ build:
     number: '0'
 package:
     name: pandeia-thirdparty
-    version: 1.2.0
+    version: 1.2.1
 requirements:
     build:
     - d2to1
@@ -34,6 +34,7 @@ requirements:
     - jupyter_client
     - notebook
     - ipython_genutils
+    - websocket-client
     - numpy x.x
     - python x.x
     run:
@@ -62,5 +63,6 @@ requirements:
     - jupyter_client
     - notebook
     - ipython_genutils
+    - websocket-client
     - numpy x.x
     - python x.x
