@@ -1,0 +1,36 @@
+{% set name = 'websocket-client' %}
+{% set version = '0.37.0' %}
+{% set tag = 'v' + version %}
+{% set number = '0' %}
+
+about:
+    home: https://github.com/liris/{{ name }}
+    license: LGPL
+    summary: WebSocket client for python
+
+package:
+    name: {{ name }}
+    version: {{ version }}
+
+build:
+    number: {{ number }}
+
+source:
+    git_tag: {{ tag }}
+    git_url: https://github.com/liris/{{ name }}.git
+
+requirements:
+    build:
+    - six
+    - setuptools
+    - python x.x
+    run:
+    - six
+    - python x.x
+
+test:
+   imports:
+   - websocket
+
+   commands:
+   - wsdump.py -h
