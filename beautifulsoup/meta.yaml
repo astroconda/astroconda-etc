@@ -1,0 +1,38 @@
+{% set name = "beautifulsoup" %}
+{% set version = "3.2.1" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "6a8cb4401111e011b579c8c52a51cdab970041cc543814bbd9577a4529fe1cdb" %}
+
+package:
+  version: '{{ version }}'
+  name: '{{ name|lower }}'
+
+source:
+  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/1e/ee/295988deca1a5a7accd783d0dfe14524867e31abb05b6c0eeceee49c759d/BeautifulSoup-3.2.1.tar.gz
+  '{{ hash_type }}': '{{ hash_value }}'
+  fn: '{{ name }}-{{ version }}.tar.gz'
+
+build:
+  number: 0
+  script: 'python setup.py install '
+
+requirements:
+  run:
+    - python
+  build:
+    - python
+
+about:
+  dev_url: ''
+  description: "This package is OBSOLETE. It has been replaced by the beautifulsoup4 package. You should use Beautiful Soup 4 for all new projects.\r\n\r\nBeautiful Soup parses arbitrarily invalid SGML\
+    \ and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree."
+  license: Python Software Foundation License
+  license_family: OTHER
+  summary: HTML/XML parser for quick-turnaround applications like screen-scraping.
+  home: http://www.crummy.com/software/BeautifulSoup/
+  license_file: ''
+  doc_url: ''
+
+extra:
+  recipe-maintainers: ''
