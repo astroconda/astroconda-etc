@@ -1,0 +1,42 @@
+{% set name = "yolk3k" %}
+{% set version = "0.9" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cf8731dd0a9f7ef50b5dc253fe0174383e3fed295a653672aa918c059eef86ae
+
+build:
+  number: 0
+  entry_points:
+    - yolk = yolk.cli:main
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - yolk
+  commands:
+    - yolk --help
+
+about:
+  home: https://github.com/myint/yolk
+  license: BSD
+  license_family: BSD
+  license_file: 
+  summary: Command-line tool for querying PyPI and Python packages installed on your system.
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
