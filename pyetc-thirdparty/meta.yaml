@@ -1,12 +1,15 @@
+package:
+    name: pyetc-thirdparty
+    version: 1.0.0
+
 about:
     home: http://stsci.edu
     license: BSD
     summary: pyetc-thirdparty meta-package
+
 build:
-    number: '0'
-package:
-    name: pyetc-thirdparty
-    version: 1.0.0
+    number: 0
+
 requirements:
     build:
     - django ==1.8.14
