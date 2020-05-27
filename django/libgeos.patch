@@ -1,5 +1,5 @@
---- Django-2.0.orig/django/contrib/gis/geos/libgeos.py	2017-12-02 12:36:16.000000000 -0200
-+++ Django-2.0/django/contrib/gis/geos/libgeos.py	2017-12-06 08:12:35.806014360 -0200
+--- django/contrib/gis/geos/libgeos.py  2017-12-02 12:36:16.000000000 -0200
++++ django/contrib/gis/geos/libgeos.py  2017-12-06 08:12:35.806014360 -0200
 @@ -8,8 +8,8 @@
  """
  import logging

@@ -1,5 +1,5 @@
---- Django-2.0.orig/django/contrib/gis/gdal/libgdal.py	2017-12-02 12:36:16.000000000 -0200
-+++ Django-2.0/django/contrib/gis/gdal/libgdal.py	2017-12-06 08:14:42.730016198 -0200
+--- django/contrib/gis/gdal/libgdal.py  2017-12-02 12:36:16.000000000 -0200
++++ django/contrib/gis/gdal/libgdal.py  2017-12-06 08:14:42.730016198 -0200
 @@ -1,5 +1,6 @@
  import logging
  import os

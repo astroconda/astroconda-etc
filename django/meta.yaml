@@ -1,4 +1,4 @@
-{% set version = "2.2.9" %}
+{% set version = "2.2.12" %}
 
 package:
   name: django
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/D/Django/Django-{{ version }}.tar.gz
-  sha256: 662a1ff78792e3fd77f16f71b1f31149489434de4b62a74895bd5d6534e635a5
+  sha256: 69897097095f336d5aeef45b4103dceae51c00afa6d3ae198a2a18e519791b7a
   patches:
     # Hard-code gdal and geos' paths to the corresponding conda packages.
     - libgdal.patch
@@ -14,8 +14,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [py2k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [py2k]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - django-admin = django.core.management:execute_from_command_line
 
@@ -26,10 +26,11 @@ requirements:
   run:
     - python
     - pytz
-    - sqlparse
+    - sqlparse >=0.2.2
 
 test:
   requires:
+    - pip
     # Test optional dependency.
     - psycopg2  # [not win]
   imports:
@@ -155,7 +156,6 @@ test:
     - django.contrib.staticfiles
     - django.contrib.staticfiles.management
     - django.contrib.staticfiles.management.commands
-    - django.contrib.staticfiles.templatetags
     - django.contrib.syndication
     - django.core
     - django.core.checks
@@ -175,7 +175,6 @@ test:
     - django.db.backends.dummy
     - django.db.backends.mysql
     - django.db.backends.oracle
-    - django.db.backends.postgresql_psycopg2  # [not win]
     - django.db.backends.sqlite3
     - django.db.migrations
     - django.db.migrations.operations
@@ -197,13 +196,14 @@ test:
     - django.views.decorators
     - django.views.generic
   commands:
+    - pip check
     - django-admin --help
 
 about:
   home: http://www.djangoproject.com/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
-  summary: 'A high-level Python Web framework that encourages rapid development and clean, pragmatic design.'
+  summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
   dev_url: https://github.com/django/django
   doc_url: http://www.djangoproject.com/
 
