@@ -1,4 +1,4 @@
-{% set version = "2.2.12" %}
+{% set version = "2.2.15" %}
 
 package:
   name: django
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/D/Django/Django-{{ version }}.tar.gz
-  sha256: 69897097095f336d5aeef45b4103dceae51c00afa6d3ae198a2a18e519791b7a
+  sha256: 3e2f5d172215862abf2bac3138d8a04229d34dbd2d0dab42c6bf33876cc22323
   patches:
     # Hard-code gdal and geos' paths to the corresponding conda packages.
     - libgdal.patch
