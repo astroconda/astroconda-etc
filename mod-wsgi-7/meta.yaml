@@ -1,4 +1,4 @@
-{% set name = "mod-wsgi" %}
+{% set name = "mod-wsgi-7" %}
 {% set version = "4.5.7" %}
 {% set hash_type = "sha256" %}
 {% set hash_value = "5d8e7789f6b2c84696bf58da6e6489246722e13a7ed137f7c9b32f8010017250" %}
